@@ -1,0 +1,12 @@
+Create a product:
+curl -v -H "Content-Type: application/json" -d "{\"name\": \"Microsoft Surface\", \"price\": 1000}" localhost:8080/products
+
+List products:
+curl localhost:8080/products | json
+
+Login:
+
+curl -v -H "Content-Type: application/json" -d "{\"email\":\"nam@codejava.net\", \"password\":\"nam2020\"}" localhost:8080/auth/login
+
+Access protected API:
+curl -v -H "Authorization: Bearer <token>" localhost:8080/products
